@@ -4,30 +4,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 	/* Mobile responsive adjustments */
-@media (max-width: 600px) {
-  .nav .brand {
-    flex-direction: column;
+/* Default header */
+header {
+  display: flex;
+  flex-direction: row; /* Desktop: horizontal */
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  gap: 16px;
+}
+
+/* Profile picture */
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Pills */
+.split {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* vertical stacking on mobile */
     align-items: center;
     text-align: center;
+    gap: 12px;
   }
-  .split {
-    flex-direction: column;
-    gap: 8px;
-  }
+  
   .avatar {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
   }
-  .pill {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+
+  .split {
+    justify-content: center;
   }
 }
 
 </style>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tin Ko Aung – Resume</title>
 <meta name="description" content="Resume website for Tin Ko Aung – Customer Service, Sales, and Hospitality.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -466,6 +489,7 @@ window.onclick = function(event){
 </script>
 </body>
 </html>
+
 
 
 
