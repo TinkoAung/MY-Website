@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin Ko Aung – Resume</title>
+<meta name="description" content="Resume website for Tin Ko Aung – Customer Service, Sales, and Hospitality.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1220; --card:#0f172a; --muted:#94a3b8; --text:#e5e7eb;
+  --primary:#3b82f6; --accent:#60a5fa; --ring:rgba(59,130,246,.35);
+}
+*{box-sizing:border-box;}
+body{margin:0; font-family:Inter, system-ui, sans-serif;
+  background:radial-gradient(1200px 600px at 10% 0%, rgba(59,130,246,.10), transparent 40%),
+             radial-gradient(900px 500px at 90% 10%, rgba(59,130,246,.08), transparent 40%),
+             var(--bg);
+  color:var(--text); line-height:1.6;}
+a{color:var(--accent); text-decoration:none; word-break:break-word;}
+a:hover{color:#93c5fd;}
+.container{max-width:1100px; margin:0 auto; padding:24px;}
+header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(8px);
+  background:linear-gradient(180deg, rgba(11,18,32,.85), rgba(11,18,32,.55));
+  border-bottom:1px solid rgba(148,163,184,.15);}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0;}
+.brand{display:flex; align-items:center; gap:12px;}
+.avatar{width:44px; height:44px; border-radius:50%; overflow:hidden;}
+.avatar img{width:100%; height:100%; object-fit:cover;}
+.brand h1{font-size:1.1rem; margin:0;}
+.pill{display:inline-flex; gap:8px; align-items:center; padding:10px 14px; border-radius:999px;
+  background:#0b274b; border:1px solid rgba(59,130,246,.35); color:#dbeafe; text-decoration:none;}
+.pill svg{width:18px; height:18px;}
+.grid{display:grid; grid-template-columns: 1fr; gap:22px; margin-top:22px;}
+@media (min-width:960px){.grid{grid-template-columns:340px 1fr;}}
+.card{background:linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.7));
+  border:1px solid rgba(148,163,184,.14); border-radius:18px; box-shadow:0 10px 30px rgba(2,8,23,.35); padding:22px; overflow:hidden;}
+.card h3{display:flex; align-items:center; gap:8px; margin-bottom:12px; font-size:1rem; letter-spacing:.04em; text-transform:uppercase; color:#cbd5e1;}
+.card .title{font-size:1.9rem; line-height:1.2; margin:6px 0 8px; font-weight:800;}
+.muted{color:var(--muted);}
+.btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px;
+  background:var(--primary); color:white; font-weight:600; border:1px solid rgba(59,130,246,.6);
+  box-shadow:0 8px 20px rgba(30,58,138,.35); cursor:pointer;}
+.btn:hover{filter:brightness(1.05);}
+.btn.secondary{background:transparent; color:#cbd5e1; border-color:rgba(148,163,184,.35);}
+.split{display:flex; gap:10px; flex-wrap:wrap;}
+.kv{display:grid; grid-template-columns: minmax(100px, 130px) 1fr; gap:10px; margin:10px 0; word-break:break-word;}
+.list{display:grid; gap:12px; padding-left:0; list-style:none;}
+.list li{display:flex; gap:10px;}
+.dot{width:8px; height:8px; border-radius:50%; background:var(--primary); margin-top:10px; flex:0 0 auto;}
+.timeline{position:relative;}
+.timeline:before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, rgba(59,130,246,.35), rgba(59,130,246,0));}
+.item{position:relative; padding-left:28px; margin-bottom:20px;}
+.item:before{content:""; position:absolute; left:6px; top:8px; width:10px; height:10px; border:2px solid var(--accent); background:var(--card); border-radius:50%;}
+.role{font-weight:700;}
+.org{opacity:.9;}
+.period{color:var(--muted); font-size:.92rem;}
+footer{padding:26px 0; text-align:center; color:#a8b1c2; font-size:.95rem;}
+
+/* Skills */
+.skills-list { display:flex; flex-direction:column; gap:12px; margin-top:10px;}
+.skill-name { font-size:0.95rem; margin-bottom:4px; color:#e5e7eb;}
+.skill-bar { width:100%; height:10px; background: rgba(59,130,246,0.2); border-radius:8px; overflow:hidden;}
+.skill-fill { height:100%; background: var(--primary); border-radius:8px; transition: width 0.5s ease-in-out;}
+
+/* Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:50; }
+.modal-content { background:var(--card); padding:24px; border-radius:18px; width:90%; max-width:700px; max-height:90%; overflow:auto; position:relative;}
+.close { position:absolute; top:12px; right:20px; font-size:24px; cursor:pointer; color:white;}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+  <div class="brand">
+    <div class="avatar"><img src="Profile Image.jpg" alt="Tin Ko Aung Profile Photo"></div>
+    <div>
+      <h1>Tin Ko Aung</h1>
+      <div class="muted">Customer Service • Sales • Hospitality</div>
+    </div>
+  </div>
+  <div class="split">
+  <a class="pill" href="tel:+971503246025">
+    <svg class="icon phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64.58 1 1 0 011 1v3.5a1 1 0 01-1 1A17.91 17.91 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.28.2 2.53.58 3.64a1 1 0 01-.21 1.11l-2.25 2.04z"/></svg>
+    +971 50 324 6025
+  </a>
+  <a class="pill" href="mailto:tinkoagoct102895@gmail.com">
+    <svg class="icon email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none"/><path d="M2 4l10 8 10-8"/></svg>
+    Email Me
+  </a>
+  <a class="pill" href="https://wa.me/971503246025" target="_blank">
+    <svg class="icon whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.66 14.3c-.25-.13-1.48-.73-1.71-.81s-.4-.12-.57.13-.65.81-.8.98-.3.19-.55.06-1.06-.39-2.01-1.25c-.74-.66-1.24-1.48-1.39-1.66s-.15-.28 0-.41.33-.3.5-.46.25-.25.38-.42.13-.28.2-.46.05-.33-.03-.46-.57-1.37-.78-1.88-.4-.43-.56-.44-.33-.02-.51-.02a1.07 1.07 0 00-.78.38c-.27.28-1.04 1.01-1.04 2.46s1.07 2.86 1.22 3.06 2.1 3.26 5.09 4.57c.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.48-.61 1.69-1.2s.21-1.08.15-1.2c-.06-.12-.23-.19-.48-.31z"/></svg>
+    WhatsApp
+  </a>
+  <a class="pill" href="TinKoAung_CV.pdf" download>⬇️ Download CV</a>
+</div>
+
+<style>
+.pill svg.icon {
+  width:18px;
+  height:18px;
+  vertical-align:middle;
+  margin-right:6px;
+  stroke: currentColor; /* fill -> stroke */
+  stroke-width:2;
+  fill:none;
+}
+
+/* သီးသန့်အရောင် assign */
+.pill .phone { color: #25D366; }    /* Phone: Green */
+.pill .email { color: #EA4335; }    /* Email: Gmail Red */
+.pill .whatsapp { color: #25D366; } /* WhatsApp Green */
+</style>
+</div>
+</header>
+
+<main class="container">
+<div class="grid">
+  <!-- LEFT COLUMN -->
+  <aside class="card">
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Profile
+    </h3>
+    <div class="title">Hello! 👋</div>
+    <p>I am a university graduate with strong experience in customer service. I relocated to the UAE to pursue a career in the hospitality industry because I enjoy engaging with people and delivering high-quality service. I take pride in my work, stay attentive to details, and strive to be a positive and reliable member of any team I join.</p>
+    <div class="split" style="margin-top:10px">
+      <div class="btn" id="hireBtn">Hire Me</div>
+      <div class="btn secondary" id="experienceBtn">View Experience</div>
+    </div>
+
+    <!-- Skills -->
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Skills
+    </h3>
+    <div class="skills-list">
+      <div class="skill"><div class="skill-name">Sales Strategies</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill"><div class="skill-name">Negotiation Skills</div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+      <div class="skill"><div class="skill-name">Problem-Solving</div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+      <div class="skill"><div class="skill-name">Time Management</div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+      <div class="skill"><div class="skill-name">Presentation Skills</div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+      <div class="skill"><div class="skill-name">Team Collaboration</div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+      <div class="skill"><div class="skill-name">Computer / Typing</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+    </div>
+
+    <!-- Education -->
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+       Education
+    </h3>
+    <section class="card">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Education
+        </h3>
+        <div class="timeline">
+          <div class="item">
+            <div class="role">B.Sc. (Industrial Chemistry)</div>
+            <div class="org">University of Dagon</div>
+            <div class="period">2013 – 2019</div>
+          </div>
+          <div class="item">
+            <div class="role">Food & Beverage Service Course</div>
+            <div class="org">Trust Tourism & Hospitality</div>
+            <div class="period">2023</div>
+          </div>
+        </div>
+  </aside>
+
+  <!-- RIGHT COLUMN -->
+  <section class="card" id="experience-section">
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3h-8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/></svg>
+      Work Experience
+    </h3>
+    <div class="timeline">
+      <div class="item">
+        <div class="role">General Worker</div>
+        <div class="org">Al Sanawat Al Taibah Decor Construction — Dubai, UAE</div>
+        <div class="period">Mar 2024 – Jun 2025 · 1 yr 4 mos</div>
+        <ul class="list">
+          <li><span class="dot"></span>Supported day-to-day site operations and assisted team members to meet project timelines and quality.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Customer Service Officer (Call Center Agent)</div>
+        <div class="org">Mascon International Business Service (MIBS)</div>
+        <div class="period">2020 – 2024 · 4 yrs</div>
+        <ul class="list">
+          <li><span class="dot"></span>Assisted and resolved issues for customers using Wave Money, Myanmar’s largest money transfer service.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Senior B2B Sales Executive</div>
+        <div class="org">UNiQUE Commercial Co., Ltd. (Myanmar’s leading IT, Mobile & Electronics Centers)</div>
+        <div class="period">2018 – 2019 · 1 yr</div>
+        <ul class="list">
+          <li><span class="dot"></span>Updated website (products, prices) and managed orders.</li>
+          <li><span class="dot"></span>Handled customer queries on social media and via phone; sent quotations to clients.</li>
+          <li><span class="dot"></span>Coordinated with Sales Team to convert inquiries to sales; scheduled B2B meetings.</li>
+          <li><span class="dot"></span>Prepared and signed MOUs with business partners and submitted regular activity reports.</li>
+          <li><span class="dot"></span>Negotiated agreements/partnerships and collaborated on B2B partnerships for mutual benefit.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Sales Assistant</div>
+        <div class="org">City Mart Holding Co., Ltd.</div>
+        <div class="period">2013 · 6 mos</div>
+        <ul class="list">
+          <li><span class="dot"></span>Helped customers find products and provided tailored recommendations.</li>
+          <li><span class="dot"></span>Maintained inventory; restocked shelves and organized displays.</li>
+          <li><span class="dot"></span>Worked with the team to keep the store clean and well-organized.</li>
+        </ul>
+      </div>
+    </div>
+	<div class="card pdf-links-card" style="margin-top:20px; padding:16px;">
+  <ul style="list-style:none; padding-left:0; margin:0; display:flex; flex-direction:column; gap:8px;">
+    <li>
+      <a href="F&B TKA.pdf" download class="pdf-link">
+        ⬇️ Curriculum Vitae (PDF)
+      </a>
+    </li>
+    <li>
+      <a href="IMG_0003.pdf" download class="pdf-link">
+        ⬇️ Reference Document (PDF)
+      </a>
+    </li>
+  </ul>
+</div>
+
+	<style>
+	/* PDF Links Card Hover Effect */
+	.pdf-links-card {
+  background: linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.7));
+  border: 1px solid rgba(148,163,184,.14);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(2,8,23,.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pdf-links-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(2,8,23,.45);
+}
+.pdf-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.pdf-link:hover {
+  color: var(--primary);
+}
+</style>
+
+  </section>
+
+  <!-- Contact -->
+  <aside class="card" id="contact-section">
+    <h3>
+      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v1"/><rect x="3" y="8" width="18" height="13" rx="2"/></svg>
+      Contact
+    </h3>
+    <div class="kv">
+      <div>Phone</div><div><a href="tel:+971503246025">+971 50 324 6025</a></div>
+      <div>Email</div><div><a href="mailto:tinkoagoct102895@gmail.com">tinkoagoct102895@gmail.com</a></div>
+      <div>WhatsApp</div><div><a href="https://wa.me/971503246025" target="_blank">Chat on WhatsApp</a></div>
+      <div>CV</div><div><a href="TinKoAung_CV.pdf" download>Download CV</a></div>
+      <div>Location</div><div>Al Rigga, Union Metro Station (Dubai, UAE)</div>
+    </div>
+  </aside>
+</div>
+</main>
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close" id="imageClose">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+// Profile Image Click -> Modal
+const avatarImg = document.querySelector('.avatar img');
+const imageModal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+const imageClose = document.getElementById('imageClose');
+
+avatarImg.onclick = () => {
+  imageModal.style.display = 'block';
+  modalImg.src = avatarImg.src;
+}
+
+imageClose.onclick = () => imageModal.style.display = 'none';
+window.onclick = (e) => { 
+  if(e.target == imageModal) imageModal.style.display = 'none'; 
+}
+</script>
+
+<main class="container">
+  <!-- Main content: Profile, Skills, Education, Work Experience, Contact -->
+</main>
+<!-- Floating Pagination -->
+<div class="pagination-floating">
+  <a href="page1.html" class="page active">1</a>
+  <a href="page2.html" class="page">2</a>
+  <a href="page2.html" class="next">&rarr; Next</a>
+</div>
+<style>
+	.pagination-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(15,23,42,0.85);
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  font-family: Inter, sans-serif;
+}
+
+.pagination-floating a.page,
+.pagination-floating a.next {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.pagination-floating a.page:hover,
+.pagination-floating a.next:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.pagination-floating a.page.active {
+  background: #3b82f6;
+  color: #fff;
+  pointer-events: none;
+}
+</style>
+
+<!-- Footer -->
+<footer>
+  © <span id="y"></span> Tin Ko Aung — Open to roles in hospitality, customer support, and sales.
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+
+<!-- Modals -->
+<div class="modal" id="hireModal">
+  <div class="modal-content">
+    <span class="close" id="hireClose">&times;</span>
+    <h2>Contact</h2>
+    <div class="kv">
+      <div>Phone</div><div><a href="tel:+971503246025">+971 50 324 6025</a></div>
+      <div>Email</div><div><a href="mailto:tinkoagoct102895@gmail.com">tinkoagoct102895@gmail.com</a></div>
+      <div>WhatsApp</div><div><a href="https://wa.me/971503246025" target="_blank">Chat on WhatsApp</a></div>
+      <div>CV</div><div><a href="TinKoAung_CV.pdf" download>Download CV</a></div>
+      <div>Location</div><div>Al Rigga, Union Metro Station (Dubai, UAE)</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="experienceModal">
+  <div class="modal-content">
+    <span class="close" id="expClose">&times;</span>
+    <h2>Work Experience Details</h2>
+    <div class="timeline">
+      <!-- Repeat same Work Experience timeline as above -->
+      <div class="item">
+        <div class="role">General Worker</div>
+        <div class="org">Al Sanawat Al Taibah Decor Construction — Dubai, UAE</div>
+        <div class="period">Mar 2024 – Jun 2025 · 1 yr 4 mos</div>
+        <ul class="list">
+          <li><span class="dot"></span>Supported day-to-day site operations and assisted team members to meet project timelines and quality.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Customer Service Officer (Call Center Agent)</div>
+        <div class="org">Mascon International Business Service (MIBS)</div>
+        <div class="period">2020 – 2024 · 4 yrs</div>
+        <ul class="list">
+          <li><span class="dot"></span>Assisted and resolved issues for customers using Wave Money, Myanmar’s largest money transfer service.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Senior B2B Sales Executive</div>
+        <div class="org">UNiQUE Commercial Co., Ltd. (Myanmar’s leading IT, Mobile & Electronics Centers)</div>
+        <div class="period">2018 – 2019 · 1 yr</div>
+        <ul class="list">
+          <li><span class="dot"></span>Updated website (products, prices) and managed orders.</li>
+          <li><span class="dot"></span>Handled customer queries on social media and via phone; sent quotations to clients.</li>
+          <li><span class="dot"></span>Coordinated with Sales Team to convert inquiries to sales; scheduled B2B meetings.</li>
+          <li><span class="dot"></span>Prepared and signed MOUs with business partners and submitted regular activity reports.</li>
+          <li><span class="dot"></span>Negotiated agreements/partnerships and collaborated on B2B partnerships for mutual benefit.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Sales Assistant</div>
+        <div class="org">City Mart Holding Co., Ltd.</div>
+        <div class="period">2013 · 6 mos</div>
+        <ul class="list">
+          <li><span class="dot"></span>Helped customers find products and provided tailored recommendations.</li>
+          <li><span class="dot"></span>Maintained inventory; restocked shelves and organized displays.</li>
+          <li><span class="dot"></span>Worked with the team to keep the store clean and well-organized.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+© 2025 Tin Ko Aung. All rights reserved.
+</footer>
+
+<script>
+const hireBtn = document.getElementById("hireBtn");
+const hireModal = document.getElementById("hireModal");
+const hireClose = document.getElementById("hireClose");
+
+const experienceBtn = document.getElementById("experienceBtn");
+const experienceModal = document.getElementById("experienceModal");
+const expClose = document.getElementById("expClose");
+
+hireBtn.onclick = () => hireModal.style.display = "flex";
+hireClose.onclick = () => hireModal.style.display = "none";
+
+experienceBtn.onclick = () => experienceModal.style.display = "flex";
+expClose.onclick = () => experienceModal.style.display = "none";
+
+window.onclick = function(event){
+  if(event.target === hireModal) hireModal.style.display="none";
+  if(event.target === experienceModal) experienceModal.style.display="none";
+};
+</script>
+</body>
+</html>
