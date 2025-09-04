@@ -3,21 +3,43 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-	/* Modal Image Responsive */
+	/* Modal Container */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  z-index: 50;
+  padding: 16px;           /* mobile padding */
+  box-sizing: border-box;
+}
+
+/* Modal Content */
 .modal-content {
-  width: 90%;        /* မိုဘိုင်းမှာ screen width 90% */
-  max-width: 400px;  /* Desktop အတွက် အများဆုံး width */
-  max-height: 90vh;  /* စက် screen အမြင့်အတိအကျ ထိန်းချုပ် */
-  overflow: hidden;
+  width: 100%;
+  max-width: 400px;        /* desktop အတွက် limit */
+  max-height: 90vh;        /* screen height ထိန်း */
+  overflow: auto;
   border-radius: 12px;
+  display: flex;
+  justify-content: center; /* content center horizontally */
+  align-items: center;     /* content center vertically */
+  flex-direction: column;  /* image + text stack */
 }
 
 .modal-content img {
-  width: 100%;       /* အပြည့်အဝ fit */
-  height: auto;      /* aspect ratio မချိုးစေ */
-  object-fit: contain; /* image ပုံစံအတိုင်း ပြသ */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   display: block;
   border-radius: 12px;
+}
+
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -459,6 +481,7 @@ window.onclick = function(event){
 </script>
 </body>
 </html>
+
 
 
 
