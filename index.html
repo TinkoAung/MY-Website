@@ -3,41 +3,33 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-	/* Modal Container */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
-  z-index: 100;
-  padding: 16px;           /* mobile padding */
-  box-sizing: border-box;
+	@media (max-width: 768px) {
+.profile-container {
+flex-direction: column; /* row ကနေ column ပြောင်း */
+align-items: center; /* အလယ်စေ */
+text-align: center; /* စာသားအလယ်စေ */
 }
 
-/* Modal Content */
-.modal-content {
-  width: 100%;
-  max-width: 400px;        /* desktop အတွက် limit */
-  max-height: 90vh;        /* screen height ထိန်း */
-  overflow: auto;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center; /* content center horizontally */
-  align-items: center;     /* content center vertically */
-  flex-direction: column;  /* image + text stack */
+.profile-image {
+width: 120px; /* Mobile အတွက် ပုံကို သေးသေးချင်း */
+height: auto;
+margin-bottom: 15px;
 }
 
-.modal-content img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 12px;
+.profile-buttons {
+display: flex;
+flex-direction: column; /* တန်းလိုက်မဟုတ်ဘဲ တစ်ကြောင်းချင်း */
+gap: 10px;
+width: 100%; /* Button ကို Mobile screen အတွက် full width */
+}
+}
+.profile-image {
+border-radius: 50%;
+max-width: 150px;
+}
+.profile-text {
+flex: 1;
+min-width: 250px;
 }
 </style>
 <meta charset="utf-8">
@@ -480,6 +472,7 @@ window.onclick = function(event){
 </script>
 </body>
 </html>
+
 
 
 
