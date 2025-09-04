@@ -3,51 +3,21 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-	/* Mobile responsive adjustments */
-/* Default header */
-header {
-  display: flex;
-  flex-direction: row; /* Desktop: horizontal */
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
-  gap: 30px;
-}
-
-/* Profile picture */
-.avatar {
-  width: 80px;
-  height: 60px;
-  border-radius: 50%;
+	/* Modal Image Responsive */
+.modal-content {
+  width: 90%;        /* မိုဘိုင်းမှာ screen width 90% */
+  max-width: 400px;  /* Desktop အတွက် အများဆုံး width */
+  max-height: 90vh;  /* စက် screen အမြင့်အတိအကျ ထိန်းချုပ် */
   overflow: hidden;
+  border-radius: 12px;
 }
 
-/* Pills */
-.split {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* Mobile specific adjustments */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column; /* vertical stacking on mobile */
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-  }
-  
-  .avatar {
-    width: 80px;
-    height: 80px;
-  }
-
-  .split {
-    justify-content: center;
-  }
-}
-
+.modal-content img {
+  width: 100%;       /* အပြည့်အဝ fit */
+  height: auto;      /* aspect ratio မချိုးစေ */
+  object-fit: contain; /* image ပုံစံအတိုင်း ပြသ */
+  display: block;
+  border-radius: 12px;
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -489,6 +459,7 @@ window.onclick = function(event){
 </script>
 </body>
 </html>
+
 
 
 
