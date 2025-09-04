@@ -74,29 +74,39 @@ footer{padding:26px 0; text-align:center; color:#a8b1c2; font-size:.95rem;}
 </head>
 <body>
 <header>
-<div class="container nav">
-  <div class="brand">
-    <div class="avatar"><img src="Profile Image.jpg" alt="Tin Ko Aung Profile Photo"></div>
-    <div>
-      <h1>Tin Ko Aung</h1>
-      <div class="muted">Customer Service • Sales • Hospitality</div>
+  <div class="container nav" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; padding:12px 0;">
+    <!-- Brand + Avatar -->
+    <div class="brand" style="display:flex; align-items:center; gap:12px; flex:1 1 100%;">
+      <div class="avatar" style="width:60px; height:60px; border-radius:50%; overflow:hidden;">
+        <img src="Profile Image.jpg" alt="Tin Ko Aung Profile Photo" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div>
+        <h1 style="margin:0; font-size:1.1rem;">Tin Ko Aung</h1>
+        <div class="muted" style="font-size:0.9rem; color:#94a3b8;">Customer Service • Sales • Hospitality</div>
+      </div>
     </div>
-  </div>
-  <div class="split">
-  <a class="pill" href="tel:+971503246025">
-    <svg class="icon phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64.58 1 1 0 011 1v3.5a1 1 0 01-1 1A17.91 17.91 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.28.2 2.53.58 3.64a1 1 0 01-.21 1.11l-2.25 2.04z"/></svg>
-    +971 50 324 6025
-  </a>
-  <a class="pill" href="mailto:tinkoagoct102895@gmail.com">
-    <svg class="icon email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none"/><path d="M2 4l10 8 10-8"/></svg>
-    Email Me
-  </a>
-  <a class="pill" href="https://wa.me/971503246025" target="_blank">
-    <svg class="icon whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.66 14.3c-.25-.13-1.48-.73-1.71-.81s-.4-.12-.57.13-.65.81-.8.98-.3.19-.55.06-1.06-.39-2.01-1.25c-.74-.66-1.24-1.48-1.39-1.66s-.15-.28 0-.41.33-.3.5-.46.25-.25.38-.42.13-.28.2-.46.05-.33-.03-.46-.57-1.37-.78-1.88-.4-.43-.56-.44-.33-.02-.51-.02a1.07 1.07 0 00-.78.38c-.27.28-1.04 1.01-1.04 2.46s1.07 2.86 1.22 3.06 2.1 3.26 5.09 4.57c.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.48-.61 1.69-1.2s.21-1.08.15-1.2c-.06-.12-.23-.19-.48-.31z"/></svg>
-    WhatsApp
-  </a>
-  <a class="pill" href="TinKoAung_CV.pdf" download>⬇️ Download CV</a>
-</div>
+
+    <!-- Contact Pills -->
+    <div class="split" style="display:flex; flex-wrap:wrap; gap:8px; flex:1 1 100%; margin-top:8px;">
+      <a class="pill" href="tel:+971503246025" style="display:flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; background:#0b274b; border:1px solid rgba(59,130,246,.35); color:#dbeafe; text-decoration:none;">
+        <svg class="icon phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:18px; height:18px; stroke:#25D366; fill:none; stroke-width:2;"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64.58 1 1 0 011 1v3.5a1 1 0 01-1 1A17.91 17.91 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.28.2 2.53.58 3.64a1 1 0 01-.21 1.11l-2.25 2.04z"/></svg>
+        +971 50 324 6025
+      </a>
+
+      <a class="pill" href="mailto:tinkoagoct102895@gmail.com" style="display:flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; background:#0b274b; border:1px solid rgba(59,130,246,.35); color:#dbeafe; text-decoration:none;">
+        <svg class="icon email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:18px; height:18px; stroke:#EA4335; fill:none; stroke-width:2;"><path d="M2 4h20v16H2z" fill="none"/><path d="M2 4l10 8 10-8"/></svg>
+        Email Me
+      </a>
+
+      <a class="pill" href="https://wa.me/971503246025" target="_blank" style="display:flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; background:#0b274b; border:1px solid rgba(59,130,246,.35); color:#dbeafe; text-decoration:none;">
+        <svg class="icon whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:18px; height:18px; stroke:#25D366; fill:none; stroke-width:2;"><path d="M16.66 14.3c-.25-.13-1.48-.73-1.71-.81s-.4-.12-.57.13-.65.81-.8.98-.3.19-.55.06-1.06-.39-2.01-1.25c-.74-.66-1.24-1.48-1.39-1.66s-.15-.28 0-.41.33-.3.5-.46.25-.25.38-.42.13-.28.2-.46.05-.33-.03-.46-.57-1.37-.78-1.88-.4-.43-.56-.44-.33-.02-.51-.02a1.07 1.07 0 00-.78.38c-.27.28-1.04 1.01-1.04 2.46s1.07 2.86 1.22 3.06 2.1 3.26 5.09 4.57c.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.48-.61 1.69-1.2s.21-1.08.15-1.2c-.06-.12-.23-.19-.48-.31z"/></svg>
+        WhatsApp
+      </a>
+
+      <a class="pill" href="TinKoAung_CV.pdf" download style="display:flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; background:#0b274b; border:1px solid rgba(59,130,246,.35); color:#dbeafe; text-decoration:none;">
+        ⬇️ Download CV
+      </a>
+    </div>
 </header>
 <main class="container">
 <div class="grid">
@@ -423,6 +433,7 @@ window.onclick = function(event){
 </script>
 </body>
 </html>
+
 
 
 
